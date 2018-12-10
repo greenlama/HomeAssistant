@@ -1,0 +1,51 @@
+default_view:
+  view: yes
+  entities:
+    - group.kitchen
+    - group.living_room
+    - group.bed_room
+    - group.toilet
+    - group.all_automations
+    - group.weather
+    - group.transmission
+    - group.automations
+    - group.apple_tv
+living_room:
+  name: Зал
+  entities:
+    - light.yeelight_rgb_286c0710c2c6
+    - light.philips_living_room
+bed_room:
+  name: Спальня
+  entities:
+    - light.philips_bed_room
+    - light.yeelight_white_f0b429a90e4f
+apple_tv:
+  name: Apple TV
+  entities:
+    - media_player.apple_tv
+    - remote.apple_tv
+kitchen:
+  name: Кухня
+  entities:
+    - switch.plug_158d0001deab04
+toilet:
+  name: Туалет
+  entities:
+    - light.yeelight_strip_34ce0087ade9
+    - switch.plug_158d00011014b8
+weather:
+  name: Погода
+  entities:
+    - weather.openweathermap
+transmission:
+  name: Transmission
+  entities:
+    - sensor.transmission_status
+    - sensor.transmission_active_torrents
+    - sensor.transmission_down_speed
+    - sensor.transmission_up_speed
+    - sensor.transmission_active_torrents
+automations:
+  name: Автоматизации
+  entities:

@@ -1,0 +1,27 @@
+light.Philips_living_room:
+  friendly_name: Светильник
+light.Philips_bed_room:
+  friendly_name: Светильник
+light.yeelight_rgb_286c0710c2c6:
+  friendly_name: Торшер
+light.yeelight_white_f0b429a90e4f:
+  friendly_name: Торшер
+light.yeelight_strip_34ce0087ade9:
+  friendly_name: Подсветка
+  
+switch.plug_158d00011014b8:
+  friendly_name: Вытяжка
+switch.plug_158d0001deab04:
+  friendly_name: Подсветка
+  
+weather.openweathermap:
+  friendly_name: Казань
+  
+automation.homekit_delayed_start:
+  friendly_name: Отсрочка запуска Homekit
+  hidden: true
+  
+media_player.apple_tv:
+  friendly_name: Apple TV
+remote.apple_tv:
+  friendly_name: Apple TV

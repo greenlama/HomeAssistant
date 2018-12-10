@@ -1,0 +1,17 @@
+- alias: 'HomeKit Delayed Start'
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - delay: 00:03
+    - service: homekit.start
+    
+- id: letsencrypt-renewal
+  alias: "Let's Encrypt Renewal"
+  trigger:
+  - platform: time
+    at: '00:00:00'
+  action:
+  - service: hassio.addon_restart
+    data:
+      addon: core_letsencrypt

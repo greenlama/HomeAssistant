@@ -1,0 +1,84 @@
+resources:
+  - url: /local/slider-entity-row.js?v=d6da757
+    type: js
+  - url: /local/card-modder.js?v=b44fb3e
+    type: module
+  - url: /local/mini-media-player-bundle.js?v=0.9.5
+    type: module
+  - url: /local/weather-card.js
+    type: js
+
+name: home 
+views:
+- title: Управление
+  id: controls
+  icon: mdi:home-variant
+  background: center / cover no-repeat url("/local/back.png") fixed
+  cards:
+  - type: custom:card-modder
+    card:
+      type: entities
+      title: Зал
+      show_header_toggle: false
+      entities:
+      - entity: light.philips_living_room
+        type: custom:slider-entity-row
+        toggle: true
+        group: true
+      - entity: light.yeelight_rgb_286c0710c2c6
+        type: custom:slider-entity-row
+        toggle: true
+        group: true
+      - type: divider
+        style:
+          height: 20px
+          margin: 4px 0
+          background: center / contain url("/local/divider.png") no-repeat
+      - entity: media_player.apple_tv
+        type: "custom:mini-media-player"
+        group: true
+    style:
+      background-image: url("/local/cardbackK.png")
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 68px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+      color: "#999999"
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+  - type: custom:card-modder
+    card:
+      type: entities
+      title: Кухня
+      show_header_toggle: false
+      entities:
+        - switch.plug_158d0001deab04
+    style:
+      background-image: url("/local/cardbackK.png")
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 68px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+      color: "#999999"
+      box-shadow: 3px 3px rgba(0,0,0,0.4)    
+  - type: custom:card-modder
+    card:
+      type: entities
+      title: Туалет
+      show_header_toggle: false
+      entities:
+        - entity: light.yeelight_strip_34ce0087ade9
+          type: custom:slider-entity-row
+          toggle: true
+          group: true
+        - switch.plug_158d00011014b8
+    style:                 
+      background-image: url("/local/cardbackK.png")
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 68px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+      color: "#999999"
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
