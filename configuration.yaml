@@ -24,9 +24,6 @@ panel_iframe:
     icon: mdi:sitemap
     url: !secret nodered_url
     
-# Show links to resources in log and frontend
-#introduction:
-
 # Enables the frontend
 frontend:
   themes: !include themes.yaml
@@ -36,15 +33,12 @@ config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
+  api_password: !secret api_password
   base_url: !secret url
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
 
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
@@ -62,6 +56,20 @@ history:
 
 # View all events in a logbook
 logbook:
+  exclude:
+    entities:
+      - sensor.memory_use_percent
+      - sensor.cpu_temperature
+      - sensor.disk_use_percent_home
+      - sensor.disk_use_percent_homeubuntutm
+      - sensor.processor_use
+      - sensor.since_last_boot
+      - sensor.transmission_active_torrents
+      - sensor.transmission_down_speed
+      - sensor.transmission_paused_torrents
+      - sensor.transmission_status
+      - sensor.transmission_total_torrents
+      - sensor.transmission_up_speed
 
 # Enables a map showing the location of tracked devices
 map:
@@ -69,21 +77,24 @@ map:
 # Track the sun
 sun:
 
+sensor: !include sensors.yaml
+
 # Sensors
-sensor:
+#sensor:
   # Weather prediction
 #  - platform: yr
 
 # Text to speech
-tts:
-  - platform: google
+#tts:
+#  - platform: google
 
 # Cloud
-cloud:
+#cloud:
 
 group: !include groups.yaml
 
 automation: !include automations.yaml
+
 script: !include scripts.yaml
 
 xiaomi_aqara:
@@ -115,9 +126,6 @@ homekit:
       - switch.wall_switch_left_158d00016d93d9
       - switch.wall_switch_right_158d00016d93d9
 
-weather:
-
-    
 apple_tv:
   - host: 192.168.1.141
     login_id: !secret atv_login

@@ -105,3 +105,24 @@ views:
       border: solid 1px rgba(100,100,100,0.3)
       color: "#999999"
       box-shadow: 3px 3px rgba(0,0,0,0.4)
+  - type: custom:card-modder
+    card:
+      type: entities
+      title: Состояние батарей датчиков
+      show_header_toggle: false
+      entities:
+        - sensor.door_sensor_battery_158d0001106a52
+        - sensor.motion_sensor_battery_158d000114fc7a
+        - sensor.motion_sensor_battery_158d00016c3c5e
+        - sensor.motion_sensor_battery_158d00016dc907
+        - sensor.button_sensor_battery_158d00010a7ba4
+        - sensor.button_sensor_battery_158d000215a8e9
+    style:                 
+      background-image: url("/local/cardbackK.png")
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 68px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+      color: "#999999"
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
