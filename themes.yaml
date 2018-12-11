@@ -26,7 +26,7 @@ theme:
   paper-item-selected_-_background-color: "#77a0d4"
   paper-item-icon_-_color: "#396FB6"
   paper-item-icon-color: "#999999"
-  #paper-item-icon-active-color: "#999999"
+#   paper-item-icon-active-color: "#999999"
   paper-grey-50: "var(--sidebar-text_-_background)"
   paper-grey-200: "var(--primary-background-color)"
   label-badge-background-color: "var(--sidebar-text_-_background)"

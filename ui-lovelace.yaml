@@ -49,6 +49,29 @@ views:
   - type: custom:card-modder
     card:
       type: entities
+      title: Спальня
+      show_header_toggle: false
+      entities:
+      - entity: light.philips_bed_room
+        type: custom:slider-entity-row
+        toggle: true
+        group: true
+      - entity: light.yeelight_white_f0b429a90e4f
+        type: custom:slider-entity-row
+        toggle: true
+        group: true
+    style:
+      background-image: url("/local/cardbackK.png")
+      background-repeat: no-repeat
+      background-color: rgba(50,50,50,0.3)
+      background-size: 100% 68px
+      border-radius: 20px
+      border: solid 1px rgba(100,100,100,0.3)
+    #   color: "#999999"
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+  - type: custom:card-modder
+    card:
+      type: entities
       title: Кухня
       show_header_toggle: false
       entities:
