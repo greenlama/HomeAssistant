@@ -132,3 +132,13 @@ apple_tv:
     name: apple_tv
     start_off: true
     credentials: !secret atv_cr
+    
+media_player:
+  - platform: philips_js
+    host: 192.168.1.213
+    name: Philips TV
+    api_version: 1
+    turn_on_action:
+      service: wake_on_lan.send_magic_packet
+      data:
+        mac: d0:ae:ec:20:21:bd

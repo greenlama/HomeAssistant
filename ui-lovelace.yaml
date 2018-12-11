@@ -37,6 +37,9 @@ views:
       - entity: media_player.apple_tv
         type: "custom:mini-media-player"
         group: true
+      - entity: media_player.philips_tv
+        type: "custom:mini-media-player"
+        group: true
     style:
       background-image: url("/local/cardbackK.png")
       background-repeat: no-repeat
