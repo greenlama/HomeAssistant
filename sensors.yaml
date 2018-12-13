@@ -5,15 +5,9 @@
   value_template: '{{ (value | multiply(0.001)) | round(1) }}'
 
 
-- platform: systemmonitor
-  resources:
-    - type: disk_use_percent
-      arg: /home
-    - type: disk_use_percent
-      arg: /home/ubuntu/tm
-    - type: memory_use_percent
-    - type: processor_use
-    - type: since_last_boot
+# - platform: systemmonitor
+#   resources:
+    # - type: since_last_boot
 # +binary_sensor.door_window_sensor_158d0001106a52
 # +binary_sensor.motion_sensor_158d000114fc7a
 # +binary_sensor.motion_sensor_158d00016c3c5e
@@ -106,23 +100,6 @@
           {% endif %}
         {% endif %}
     temperature_sensor_battery_158d00023764a1:
-      friendly_name: "Заряд датчика температуры"
-      unit_of_measurement: '%'
-      value_template: "{{ states.sensor.temperature_158d00023764a1.attributes. battery_level }}"
-      icon_template: >-
-        {% set battery_level = (states.sensor.temperature_158d00023764a1.attributes.battery_level)|int('unknown') %}
-        {% set battery_round = (battery_level|int / 10)|int * 10 %}
-        {% if battery_level == 'unknown' %}
-          mdi:battery-unknown
-        {% else %}
-          {% if battery_round >= 100 %}
-            mdi:battery
-          {% elif battery_round > 0 %}
-            mdi:battery-{{ battery_round }}
-          {% else %}
-            mdi:battery-alert
-          {% endif %}
-        {% endif %}
     button_sensor_battery_158d00010a7ba4:
       friendly_name: "Заряд кнопки 1"
       unit_of_measurement: '%'

@@ -8,7 +8,6 @@
 !*.md
 
 # Ignore folders.
-.storage
 .cloud
 .google.token
 
@@ -16,3 +15,10 @@
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
+auth
+auth_provider.homeassistant
+cloud
+core.entity_registry
+core.restore_state
+hassio
+onboarding

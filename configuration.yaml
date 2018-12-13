@@ -56,20 +56,9 @@ history:
 
 # View all events in a logbook
 logbook:
-  exclude:
-    entities:
-      - sensor.memory_use_percent
-      - sensor.cpu_temperature
-      - sensor.disk_use_percent_home
-      - sensor.disk_use_percent_homeubuntutm
-      - sensor.processor_use
-      - sensor.since_last_boot
-      - sensor.transmission_active_torrents
-      - sensor.transmission_down_speed
-      - sensor.transmission_paused_torrents
-      - sensor.transmission_status
-      - sensor.transmission_total_torrents
-      - sensor.transmission_up_speed
+#   exclude:
+    # entities:
+    #   - sensor.since_last_boot
 
 # Enables a map showing the location of tracked devices
 map:
